@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			:root{
+				--color:black
+			}
+			div{
+				color:var(--color)
+			}
+		</style>
+	</head>
+	<body>
+		<input type="color"  name="color" id="color" onchange="changeColor()"> 
+		<div>
+			我要变颜色
+		</div>
+	</body>
+	<script>
+		function changeColor(){
+			let color = document.getElementById('color');
+			document.body.style.setProperty('--color', color.value)
+		}
+	</script>
+</html>
